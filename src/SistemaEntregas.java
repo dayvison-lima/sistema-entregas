@@ -14,7 +14,7 @@ public class SistemaEntregas {
         while (true) {
             exibirMenu();
             int opcao = scanner.nextInt();
-            scanner.nextLine();  // Limpar o buffer do scanner
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -111,7 +111,6 @@ public class SistemaEntregas {
         int numeroEvento = scanner.nextInt();
         scanner.nextLine();
 
-        // Verifica se o número do evento é válido
         if (numeroEvento >= 0 && numeroEvento < eventos.size()) {
             Usuario usuario = obterUsuario();
             Evento evento = eventos.get(numeroEvento);
