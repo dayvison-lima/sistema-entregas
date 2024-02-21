@@ -106,10 +106,10 @@ public class SistemaEntregas {
     }
 
     private static void participarEvento() {
-        consultarEventos();  // Exibe a lista de eventos para escolha
+        consultarEventos();
         System.out.print("Escolha o evento pelo número: ");
         int numeroEvento = scanner.nextInt();
-        scanner.nextLine();  // Limpar o buffer do scanner
+        scanner.nextLine();
 
         // Verifica se o número do evento é válido
         if (numeroEvento >= 0 && numeroEvento < eventos.size()) {
@@ -153,7 +153,7 @@ public class SistemaEntregas {
         Usuario usuario = obterUsuario();
         eventos.stream()
                 .filter(evento -> evento.getParticipantes().contains(usuario))
-                .filter(evento -> !evento.getParticipantes().isEmpty()) // Excluir eventos cancelados
+                .filter(evento -> !evento.getParticipantes().isEmpty())
                 .forEach(evento -> System.out.println(evento.getNome() + " - " + evento.getHorario()));
     }
 
